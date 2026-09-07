@@ -1,57 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonnymovies - Movies</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sonnymovies — Movie Hub</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a href="#" class="logo">Sonny<span>movies</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#movies">Movies</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+<header class="nav">
+  <a class="brand" href="#">Sonny<span>movies</span></a>
+  <nav><a href="#home">Home</a><a href="#movies">Movies</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div>
-        <p class="tag">WELCOME TO</p>
-        <h1>Sonnymovies</h1>
-        <p>Discover movies you can legally download or watch from authorized sources.</p>
-        <a class="btn" href="#movies">Browse Movies</a>
-      </div>
-    </section>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">MOVIE DISCOVERY</p>
+    <h1>Find your next<br><span>favorite movie.</span></h1>
+    <p>Browse movie information, posters and official trailers. Sonnymovies uses legitimate sources and does not host unauthorized copies of copyrighted films.</p>
+    <a class="primary" href="#movies">Explore movies</a>
+  </div>
+</section>
 
-    <section class="movies-section" id="movies">
-      <div class="section-heading">
-        <div>
-          <p class="tag">MOVIE LIBRARY</p>
-          <h2>Featured Movies</h2>
-        </div>
-        <input id="search" type="search" placeholder="Search movies...">
-      </div>
+<section class="toolbar" id="movies">
+  <div><p class="eyebrow">LIBRARY</p><h2>Movies</h2></div>
+  <input id="search" type="search" placeholder="Search a movie..." aria-label="Search movies">
+</section>
 
-      <div class="movie-grid" id="movieGrid"></div>
-    </section>
+<section class="chips" id="categories">
+  <button class="chip active" data-genre="All">All</button>
+  <button class="chip" data-genre="Action">Action</button>
+  <button class="chip" data-genre="Comedy">Comedy</button>
+  <button class="chip" data-genre="Drama">Drama</button>
+  <button class="chip" data-genre="Adventure">Adventure</button>
+  <button class="chip" data-genre="Animation">Animation</button>
+</section>
 
-    <section class="about" id="about">
-      <h2>About Sonnymovies</h2>
-      <p>
-        Sonnymovies is a simple movie-library website template. Only add movies,
-        posters, and download links that you own, have permission to distribute,
-        or that are legally available for download.
-      </p>
-    </section>
-  </main>
+<section class="grid" id="movieGrid"></section>
+<p class="empty" id="empty">No movies found.</p>
 
-  <footer>
-    <p>&copy; 2026 Sonnymovies. Built for legal movie distribution.</p>
-  </footer>
+<section class="about" id="about">
+  <h2>About Sonnymovies</h2>
+  <p>Sonnymovies is a movie-discovery project. Movie information and artwork can be supplied by The Movie Database (TMDB), while trailers can be embedded from YouTube.</p>
+  <p class="credit">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+</section>
 
-  <script src="script.js"></script>
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="close" id="close">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<footer>© 2026 Sonnymovies · Movie discovery project</footer>
+<script src="script.js"></script>
 </body>
 </html>
